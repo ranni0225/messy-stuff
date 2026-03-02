@@ -24,7 +24,7 @@ foreach ($Item in $Items.GetEnumerator()) {
         try {
             New-Item -Path $DestinationFilePath -Target $SourceFilePath -ItemType HardLink -ErrorAction Stop | Out-Null
             $LinkCount = (fsutil hardlink list $DestinationFilePath | Measure-Object).Count
-            "(V) {0,-40} => {1} [Links: {2}]" -f $SourceFileName, $DestinationFileName, $LinkCount | Write-Host -ForegroundColor Green
+            "(V) {0,-40} => {1} [HardLinks: {2}]" -f $SourceFileName, $DestinationFileName, $LinkCount | Write-Host -ForegroundColor Green
         }
         catch {
             Write-Host "(X) $SourceFileName" -ForegroundColor Red
