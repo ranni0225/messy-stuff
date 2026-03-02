@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="SymbolProvider.vcxproj" Id="91e83e16-d520-443a-bbf7-ebb4ac08c53b" />
+</Solution>
